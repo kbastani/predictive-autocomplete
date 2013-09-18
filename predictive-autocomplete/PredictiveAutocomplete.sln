@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredictiveAutocomplete", "PredictiveAutocomplete\PredictiveAutocomplete.csproj", "{9F4BF250-ACCD-4471-91C3-DBC8862E72AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredictiveAutocomplete_Test", "PredictiveAutocomplete_Test\PredictiveAutocomplete_Test.csproj", "{D48761DB-F0DC-43C7-8E5B-AB6D8BABA74D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F4BF250-ACCD-4471-91C3-DBC8862E72AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4BF250-ACCD-4471-91C3-DBC8862E72AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4BF250-ACCD-4471-91C3-DBC8862E72AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4BF250-ACCD-4471-91C3-DBC8862E72AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D48761DB-F0DC-43C7-8E5B-AB6D8BABA74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48761DB-F0DC-43C7-8E5B-AB6D8BABA74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48761DB-F0DC-43C7-8E5B-AB6D8BABA74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48761DB-F0DC-43C7-8E5B-AB6D8BABA74D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

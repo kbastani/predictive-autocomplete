@@ -453,11 +453,6 @@ namespace PredictiveAutocomplete
         {
             if (matchText == null) return;
             target.AppendFormat("\r\nMATCH {0}", matchText);
-
-            //if (whereText != null)
-            //{
-            //    WriteWhereClause(target);
-            //}
         }
 
         void WriteDeleteClause(StringBuilder target)
@@ -925,12 +920,6 @@ namespace PredictiveAutocomplete
 
         public async Task<IEnumerable<TResult>> ExecuteGetCypherResultsAsync<TResult>(CypherQuery query)
         {
-            //CheckRoot();
-
-            //var stopwatch = new Stopwatch();
-            //stopwatch.Start();
-
-            //await Connect();
             if (RootApiResponse.neo4j_version == null)
             {
                 Connect();
@@ -950,14 +939,6 @@ namespace PredictiveAutocomplete
             var results = deserializer
                 .Deserialize(unicodeContent)
                 .ToList();
-
-            //stopwatch.Stop();
-            //OnOperationCompleted(new OperationCompletedEventArgs
-            //{
-            //    QueryText = query.QueryText,
-            //    ResourcesReturned = results.Count(),
-            //    TimeTaken = stopwatch.Elapsed
-            //});
 
             return (IEnumerable<TResult>)results;
         }
@@ -1010,52 +991,13 @@ namespace PredictiveAutocomplete
                 request.Headers.Add("Accept", "application/json;stream=true");
                 request.Headers.Remove("Accept-Encoding");
                 request.Headers.Add("Accept-Encoding", "UTF-8");
-                //
             }
 
             var assemblyVersion = GetType().Assembly.GetName().Version;
             var userAgent = string.Format("Neo4jClient/{0}", "1.0.0.498");
             request.Headers.Add("User-Agent", userAgent);
 
-            //var httpRequest = HttpWebRequest.Create(request.RequestUri);
-            //httpRequest.Headers.Remove("Accept");
-            //httpRequest.Headers.Add("Accept", "application/json;stream=true");
-
-
-            //request.Headers.Add("Authorization", Convert.ToBase64String(Encoding.ASCII.GetBytes("06533ff48:45733a7f7")));
-            //httpClient.SendAsync(request).
-
             return httpClient.SendAsync(request);
-
-            //return httpClient.SendAsync(request).ContinueWith(requestTask =>
-            //{
-            //    try
-            //    {
-            //        var response = requestTask.r;
-            //        //response.EnsureSuccessStatusCode();
-            //        if (response.StatusCode != HttpStatusCode.OK)
-            //        {
-            //            throw new Exception(response.ReasonPhrase + " " + " Payload: " + request.Content.ReadAsString().Result);
-            //        }
-            //        return response;
-            //    }
-            //    catch (Exception exr)
-            //    {
-            //        throw exr;
-            //    }
-            //});
-
-            //.SendAsync(request);
-
-
-
-            //var continuationTask = baseTask.ContinueWith(requestTask =>
-            //{
-            //var response = requestTask.Result;
-            //response.EnsureSuccessStatusCode(); //EnsureExpectedStatusCode(commandDescription, expectedStatusCodes);
-            //return response;
-            //});
-            //return continuationTask;
         }
         
         public event OperationCompletedEventHandler OperationCompleted;
@@ -1077,21 +1019,11 @@ namespace PredictiveAutocomplete
             return await SendHttpRequest(request, null, expectedStatusCodes);
         }
 
-        //Task<HttpResponseMessage> SendHttpRequestAsync(HttpRequestMessage request, params HttpStatusCode[] expectedStatusCodes)
-        //{
-        //    return SendHttpRequestAsync(request, null, expectedStatusCodes);
-        //}
-
         Task<HttpResponseMessage> SendHttpRequest(HttpRequestMessage request, string commandDescription, params HttpStatusCode[] expectedStatusCodes)
         {
             var task = SendHttpRequestAsync(request, commandDescription, expectedStatusCodes);
             return task;
         }
-
-        //T SendHttpRequestAndParseResultAs<T>(HttpRequestMessage request, params HttpStatusCode[] expectedStatusCodes) where T : new()
-        //{
-        //    return SendHttpRequestAndParseResultAs<T>(request, null, expectedStatusCodes);
-        //}
 
         async Task<T> SendHttpRequestAndParseResultAs<T>(HttpRequestMessage request, string commandDescription, params HttpStatusCode[] expectedStatusCodes) where T : new()
         {
@@ -1102,11 +1034,6 @@ namespace PredictiveAutocomplete
 
             return response.Content == null ? default(T) : await response.Content.ReadAsJson<T>();
         }
-
-        //private void CheckRoot()
-        //{
-        //    Client.
-        //}
 
         HttpRequestMessage HttpGet(string relativeUri)
         {
@@ -1145,11 +1072,6 @@ namespace PredictiveAutocomplete
                     RootApiResponse.Cypher.Substring(RootUri.AbsoluteUri.Length);
             }
 
-            //rootNode = string.IsNullOrEmpty(RootApiResponse.ReferenceNode)
-            //    ? null
-            //    : new RootNode(long.Parse(GetLastPathSegment(RootApiResponse.ReferenceNode)), this);
-
-            // http://blog.neo4j.org/2012/04/streaming-rest-api-interview-with.html
             jsonStreamingAvailable = RootApiResponse.Version >= new Version(1, 8);
 
             stopwatch.Stop();
@@ -1221,37 +1143,6 @@ namespace PredictiveAutocomplete
             }
         }
     }
-
-    //public class HttpClientWrapper : IHttpClient
-    //{
-    //    readonly HttpClient client;
-
-    //    public HttpClientWrapper() : this(new HttpClient()) { }
-
-    //    public HttpClientWrapper(HttpClient client)
-    //    {
-    //        this.client = client;
-    //    }
-
-    //    public Task<HttpResponseMessage> SendAsync(HttpRequestMessage request)
-    //    {
-    //        try
-    //        {
-    //            //client.MaxResponseContentBufferSize = 256000;
-    //            //client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-    //            //client.Timeout = new TimeSpan(0, 0, 30);
-    //            client.CancelPendingRequests();
-    //            //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Authorization", Convert.ToBase64String(Encoding.ASCII.GetBytes("06533ff48:45733a7f7")));
-                
-    //            return client.SendAsync(request); //(request, HttpCompletionOption.ResponseHeadersRead);
-    //        }
-    //        catch (Exception)
-    //        {
-
-    //            throw;
-    //        }
-    //    }
-    //}
 
     public class CypherApiQuery
     {

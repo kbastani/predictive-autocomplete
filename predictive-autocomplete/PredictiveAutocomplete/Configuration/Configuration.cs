@@ -24,7 +24,7 @@ namespace PredictiveAutocomplete
         private string _neo4jConnectionStringAuthentication = string.Empty;
         private string _autoCompleteCacheId = string.Empty;
         private string _blobStorageAddress = string.Empty;
-        
+
         // Singleton state flag
         private bool _initialized = false;
 
@@ -138,7 +138,7 @@ namespace PredictiveAutocomplete
 
         #endregion
 
-                public static CloudStorageAccount GetDataConnectionString()
+        public static CloudStorageAccount GetDataConnectionString()
         {
             try
             {
@@ -218,23 +218,6 @@ namespace PredictiveAutocomplete
             return ConfigurationManager.AppSettings["Neo4j.ConnectionString"];
         }
 
-        public static string GetReadDatabaseUri()
-        {
-            try
-            {
-                if (CloudConfigurationManager.GetSetting("Neo4j.ConnectionString") != null)
-                {
-                    var databaseUri = CloudConfigurationManager.GetSetting("Neo4j.ConnectionString");
-                    return databaseUri;
-                }
-            }
-            catch (Exception)
-            {
-            }
-            // Get database URI from configuration
-            return ConfigurationManager.AppSettings["Neo4j.ConnectionString"];
-        }
-
         public static string GetAuthorizationHeader()
         {
             if (Initialized)
@@ -247,11 +230,11 @@ namespace PredictiveAutocomplete
             }
         }
 
-                public static string GetNeo4jConnectionStringAuthentication()
+        public static string GetNeo4jConnectionStringAuthentication()
         {
             try
             {
-                if (CloudConfigurationManager.GetSetting("GuySwarm.MyAddress") != null)
+                if (CloudConfigurationManager.GetSetting("Neo4j.ConnectionString.Authentication") != null)
                 {
                     var authentication = CloudConfigurationManager.GetSetting("Neo4j.ConnectionString.Authentication");
                     return authentication;

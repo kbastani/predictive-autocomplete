@@ -11,7 +11,7 @@ namespace PredictiveAutocomplete_Tests
     {
         static void Main(string[] args)
         {
-            List<IGraphNode> results = Processor.GetRankedNodesForQuery("topic", "phrase:(\\\"GRAPH\\\")", string.Empty, "Key", 0, 20).OrderByDescending(g => g.size).ToList();
+            List<IGraphNode> results = Processor.GetRankedNodesForQuery("topic", "phrase:(\\\"MATHEMATICS\\\")", string.Empty, "Key", 0, 20).OrderByDescending(g => g.size).ToList();
 
             Processor.IndexAutoCompleteKey(results, Configuration.GetDataConnectionString(), Configuration.GetAutoCompleteCacheId(), 10, 40);
 

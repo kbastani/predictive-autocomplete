@@ -782,4 +782,6 @@ var cacheId = "atz";
 $(function () {
     $("#search_button").attr("disabled", "disabled");
     $("#search_button").unbind();
+    $("#search_query").blur();
+    $(document).scrollTop(0);
 });

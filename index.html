@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Predictive Autocomplete by kbastani</title>
@@ -18,103 +18,113 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-      <div id="header">
+</head>
+<body>
+    <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/kbastani/predictive-autocomplete">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/kbastani/predictive-autocomplete/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/kbastani/predictive-autocomplete/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
+            <li class="fork"><a href="https://github.com/kbastani/predictive-autocomplete">View On GitHub</a></li>
+            <li class="downloads"><a href="https://github.com/kbastani/predictive-autocomplete/zipball/master">ZIP</a></li>
+            <li class="downloads"><a href="https://github.com/kbastani/predictive-autocomplete/tarball/master">TAR</a></li>
+            <li class="title">DOWNLOADS</li>
         </nav>
-      </div><!-- end header -->
+    </div>
+    <!-- end header -->
 
     <div class="wrapper">
 
-      <section>
-        <div id="title">
-          <h1>Predictive Autocomplete</h1>
-          <p>Generate an Autocomplete suggestion index for your custom search applications using a Neo4j graph database and Windows Azure based cloud storage account.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/kbastani">kbastani</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+        <section>
+            <div id="title">
+                <h1>Predictive Autocomplete</h1>
+                <p>Generate an Autocomplete suggestion index for your custom search applications using a Neo4j graph database and Windows Azure based cloud storage account.</p>
+                <hr>
+                <span class="credits left">Project maintained by <a href="https://github.com/kbastani">kbastani</a></span>
+                <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+            </div>
 
-        <h1>
-<a name="predictive-autocomplete" class="anchor" href="#predictive-autocomplete"><span class="octicon octicon-link"></span></a>Predictive Autocomplete</h1>
+            <h1>
+                <a name="predictive-autocomplete" class="anchor" href="#predictive-autocomplete"><span class="octicon octicon-link"></span></a>Predictive Autocomplete</h1>
 
-<p>Creates a hierachical JSON file index that is accessible over HTTP GET requests. Easily implemented into Bootstrap.js Type Ahead jquery plugin. Use Neo4j graph database for easy ranking and Windows Azure cloud storage account for JSON file storage.</p>
+            <p>Creates a hierachical JSON file index that is accessible over HTTP GET requests. Easily implemented into <a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap.js</a> Type Ahead JQuery plugin. Use a <a href="http://www.neo4j.org/download" target="_blank">Neo4j graph database</a> for easy ranking and <a href="http://www.windowsazure.com/" target="_blank">Windows Azure</a> cloud storage account for JSON file storage.</p>
 
-<p><img src="https://raw.github.com/kbastani/predictive-autocomplete/master/images/predictive-autocomplete.png"></p>
+            <p>
+                <img class="main-image-example" src="images/json-file-graph.png"></p>
 
-<div class="container-fluid" id="search">
-    <div class="form-search well well-large">
-        <div class="input-append">
-            <input type="text" class="search-query input-xlarge" placeholder="Start typing to see results" id="search_query" style="width: 850px;">
-            <button class="btn" id="search_button" type="submit">Search</button>
-        </div>
-        <div class="equations"></div>
-    </div>
-</div>
 
-<h1>
-<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h1>
+            <h1>
+                <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h1>
+            <div class="container-fluid" id="search">
+                <div class="form-search well well-large">
+                    <div class="input-append">
+                        <input type="text" class="search-query input-xlarge" placeholder="Start typing to see results" id="search_query" style="width: 850px;">
+                        <button class="btn" id="search_button" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+            <h1>
+                <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h1>
 
-<p>Open the PredictiveAutocomplete solution file in Microsoft Visual Studio 2012.</p>
+            <p>Open the PredictiveAutocomplete solution file in Microsoft Visual Studio 2012.</p>
 
-<p>Open the App.config file in the PredictiveAutocomplete_Test project.</p>
+            <p>Open the App.config file in the PredictiveAutocomplete_Test project.</p>
 
-<p>Configure the settings to point to your Neo4j instance.</p>
+            <p>Configure the settings to point to your Neo4j instance.</p>
 
-<p>Configure the settings to point to your Windows Azure storage account.</p>
+            <p>Configure the settings to point to your Windows Azure storage account.</p>
 
-<p>Configure the path to your public storage container that will be used to store the JSON files.</p>
+            <p>Configure the path to your public storage container that will be used to store the JSON files.</p>
 
-<p><img src="https://raw.github.com/kbastani/predictive-autocomplete/master/images/predictive-autocomplete-configure.png"></p>
+            <p>
+                <img src="https://raw.github.com/kbastani/predictive-autocomplete/master/images/predictive-autocomplete-configure.png"></p>
 
-<h1>
-<a name="running-test-project-from-console" class="anchor" href="#running-test-project-from-console"><span class="octicon octicon-link"></span></a>Running test project from console</h1>
+            <h1>
+                <a name="running-test-project-from-console" class="anchor" href="#running-test-project-from-console"><span class="octicon octicon-link"></span></a>Running test project from console</h1>
 
-<p>Use the GetRankedNodesForQuery method to get ranked nodes from Neo4j graph database using a templated cypher query that queries an index using a supplied valid lucene query. </p>
 
-<p>Each node in the index has a weight rating by specifying a relationship name which is used to determine the 
-distinct number of incoming links to each node in your query with that relationship name. </p>
 
-<p>You must specify the valid property name that is to be used as the label for the autocomplete search. </p>
+            <p>Use the GetRankedNodesForQuery method to get ranked nodes from Neo4j graph database using a templated cypher query that queries an index using a supplied valid lucene query. </p>
 
-<p>For example, if you are querying a database of books and wanted to list the names of books in the 
-autocomplete search, then the label property would be "Title" where each book node b has b.Title as the book name.</p>
+            <p>
+                Each node in the index has a weight rating by specifying a relationship name which is used to determine the 
+distinct number of incoming links to each node in your query with that relationship name.
+            </p>
 
-<p>Parameters in order:</p>
+            <p>You must specify the valid property name that is to be used as the label for the autocomplete search. </p>
 
-<ol>
-<li>The case sensitive Neo4j node index name that you want to query.</li>
-<li>The valid lucene query that you want to use to query the supplied index.</li>
-<li>The relationship name that will be used to determine the number of incoming links to each node you are querying for. Leave blank if you want to query all incoming links regardless of relationship type.</li>
-<li>The label property name for each of your Neo4j nodes. See method summary for details.</li>
-<li>Skip a number of a nodes, ordered by the Neo4j assigned node id of each node you are querying for. Use this for processing batches on large graph queries.</li>
-<li>Limit the number of results you would like returned. Use this in combination with the skip property to process batches on large graph queries.</li>
-<li>Returns a list of nodes that implements IGraphNode interface, having a label and size property for ranking result order.</li>
-</ol><p>Use the IndexAutoCompleteKey method in the Processor class to index the autocomplete keys to blob storage uri.</p>
+            <p>
+                For example, if you are querying a database of books and wanted to list the names of books in the 
+autocomplete search, then the label property would be "Title" where each book node b has b.Title as the book name.
+            </p>
 
-<p>Your URI to the JSON file index will be: </p>
+            <p>Parameters in order:</p>
 
-<p>http://BLOB_STORAGE_NAME.blob.core.windows.net/BLOB_STORAGE_CONTAINER_ID/cache/PARTIAL_SEARCH_QUERY</p>
-      </section>
+            <ol>
+                <li>The case sensitive Neo4j node index name that you want to query.</li>
+                <li>The valid lucene query that you want to use to query the supplied index.</li>
+                <li>The relationship name that will be used to determine the number of incoming links to each node you are querying for. Leave blank if you want to query all incoming links regardless of relationship type.</li>
+                <li>The label property name for each of your Neo4j nodes. See method summary for details.</li>
+                <li>Skip a number of a nodes, ordered by the Neo4j assigned node id of each node you are querying for. Use this for processing batches on large graph queries.</li>
+                <li>Limit the number of results you would like returned. Use this in combination with the skip property to process batches on large graph queries.</li>
+                <li>Returns a list of nodes that implements IGraphNode interface, having a label and size property for ranking result order.</li>
+            </ol>
+            <p>Use the IndexAutoCompleteKey method in the Processor class to index the autocomplete keys to blob storage uri.</p>
+
+            <p>Your URI to the JSON file index will be: </p>
+
+            <p>http://BLOB_STORAGE_NAME.blob.core.windows.net/BLOB_STORAGE_CONTAINER_ID/cache/PARTIAL_SEARCH_QUERY</p>
+        </section>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-44372809-1");
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-44372809-1");
             pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+        } catch (err) { }
+    </script>
 
-  </body>
+</body>
 </html>

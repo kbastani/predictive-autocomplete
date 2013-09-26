@@ -777,3 +777,9 @@ document.execCommand("BackgroundImageCache",false,true);
 catch(e){
 }
 
+var cacheId = "atz";
+
+$(function () {
+    $("#search_button").attr("disabled", "disabled");
+    $("#search_button").unbind();
+});

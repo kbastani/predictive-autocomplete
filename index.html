@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Predictive Autocomplete by kbastani</title>
+    <link rel="stylesheet" href="http://arktera.com/content/bootstrap/css/bootstrap-v1.02.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://arktera.com/Scripts/main-v1.02.js" type="text/javascript"></script>
     <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,6 +46,16 @@
 <p>Creates a hierachical JSON file index that is accessible over HTTP GET requests. Easily implemented into Bootstrap.js Type Ahead jquery plugin. Use Neo4j graph database for easy ranking and Windows Azure cloud storage account for JSON file storage.</p>
 
 <p><img src="https://raw.github.com/kbastani/predictive-autocomplete/master/images/predictive-autocomplete.png"></p>
+
+<div class="container-fluid" id="search">
+    <div class="form-search well well-large">
+        <div class="input-append">
+            <input type="text" class="search-query input-xlarge" placeholder="Start typing to see results" id="search_query" style="width: 850px;">
+            <button class="btn" id="search_button" type="submit">Search</button>
+        </div>
+        <div class="equations"></div>
+    </div>
+</div>
 
 <h1>
 <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h1>

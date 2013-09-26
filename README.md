@@ -5,6 +5,11 @@ Generates a ranked predictive autocomplete index of JSON files accessible over H
 
 <img src='https://raw.github.com/kbastani/predictive-autocomplete/master/images/predictive-autocomplete.png'/>
 
+Creates a hierachical JSON file index that is accessible over HTTP GET requests. Easily implemented into Bootstrap.js Type Ahead JQuery plugin. Use a Neo4j graph database for easy ranking and Windows Azure cloud storage account for JSON file storage.
+
+<img src='http://kbastani.github.io/predictive-autocomplete/images/json-file-graph.png'/>
+
+
 Configuration
 =======================
 
